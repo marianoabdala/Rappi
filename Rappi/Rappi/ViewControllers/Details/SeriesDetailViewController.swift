@@ -5,6 +5,7 @@ class SeriesDetailViewController: UITableViewController, DetailViewController {
     
     var item: Listable?
     var provider: DetailProvider?
+    var detail: SeriesDetails?
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -14,7 +15,7 @@ class SeriesDetailViewController: UITableViewController, DetailViewController {
     @IBOutlet weak var seasonsCountLabel: UILabel!
     @IBOutlet weak var episodesCountLabel: UILabel!
     @IBOutlet weak var creatorsLabel: UILabel!
-    @IBOutlet weak var homepageLabel: UILabel!
+    @IBOutlet weak var homepageButton: UIButton!
 
     private let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
@@ -24,6 +25,17 @@ class SeriesDetailViewController: UITableViewController, DetailViewController {
         
         self.configureActivityIndicatorView()
         self.loadData()
+    }
+    
+    @IBAction func homepageButtonTapped(_ sender: Any) {
+
+        guard let homepage = self.detail?.homepage,
+            let url = URL(string: homepage) else {
+                
+            return
+        }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 
@@ -61,15 +73,17 @@ private extension SeriesDetailViewController {
                 guard let strongSelf = self,
                     let seriesDetails = details as? SeriesDetails else {
                         
-                        return
+                    return
                 }
+                
+                strongSelf.detail = seriesDetails
                 
                 DispatchQueue.main.async {
                     
                     strongSelf.seasonsCountLabel.text = String(seriesDetails.seasonsCount)
                     strongSelf.episodesCountLabel.text = String(seriesDetails.episodesCount)
                     strongSelf.creatorsLabel.text = seriesDetails.creators
-                    strongSelf.homepageLabel.text = seriesDetails.homepage
+                    strongSelf.homepageButton.setTitle(seriesDetails.homepage, for: .normal)
                     
                     strongSelf.activityIndicatorView.stopAnimating()
                 }

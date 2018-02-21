@@ -191,28 +191,39 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="9b5-0i-7b3" detailTextLabel="bum-hl-LH9" style="IBUITableViewCellStyleValue1" id="omg-ZA-0ls">
                                         <rect key="frame" x="0.0" y="396" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="omg-ZA-0ls" id="KL5-U3-aVJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Homepage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9b5-0i-7b3">
-                                                    <rect key="frame" x="16" y="12" width="84" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Homepage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9K-Wx-MW3">
+                                                    <rect key="frame" x="16" y="12" width="84" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="84" id="DxY-Mm-iNK"/>
+                                                        <constraint firstAttribute="height" constant="21" id="vDL-40-BmQ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bum-hl-LH9">
-                                                    <rect key="frame" x="354.5" y="12" width="4.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g9-LT-yHX">
+                                                    <rect key="frame" x="108" y="0.0" width="251" height="43.5"/>
+                                                    <state key="normal" title="Visit"/>
+                                                    <connections>
+                                                        <action selector="homepageButtonTapped:" destination="cuI-yc-iV1" eventType="touchUpInside" id="TJU-ge-nIl"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3g9-LT-yHX" firstAttribute="top" secondItem="KL5-U3-aVJ" secondAttribute="top" id="7BN-VO-WrA"/>
+                                                <constraint firstItem="3g9-LT-yHX" firstAttribute="bottom" secondItem="KL5-U3-aVJ" secondAttribute="bottom" id="Ql4-HL-vfp"/>
+                                                <constraint firstItem="o9K-Wx-MW3" firstAttribute="top" secondItem="KL5-U3-aVJ" secondAttribute="topMargin" constant="1" id="UbP-wh-Ltx"/>
+                                                <constraint firstItem="o9K-Wx-MW3" firstAttribute="bottom" secondItem="KL5-U3-aVJ" secondAttribute="bottomMargin" priority="999" id="a47-NS-ugX"/>
+                                                <constraint firstItem="o9K-Wx-MW3" firstAttribute="leading" secondItem="KL5-U3-aVJ" secondAttribute="leadingMargin" id="bgc-AE-FXC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3g9-LT-yHX" secondAttribute="trailing" id="u6A-3F-vaA"/>
+                                                <constraint firstItem="3g9-LT-yHX" firstAttribute="leading" secondItem="o9K-Wx-MW3" secondAttribute="trailing" constant="8" id="vgo-Rf-xqE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -227,7 +238,7 @@
                     <connections>
                         <outlet property="creatorsLabel" destination="DaZ-Tl-vyP" id="rMd-Ec-p7J"/>
                         <outlet property="episodesCountLabel" destination="rhl-Ak-gIM" id="4W6-F4-OOy"/>
-                        <outlet property="homepageLabel" destination="bum-hl-LH9" id="sLS-Rh-H3z"/>
+                        <outlet property="homepageButton" destination="3g9-LT-yHX" id="jUx-Qf-cb7"/>
                         <outlet property="overviewLabel" destination="ySE-5e-mty" id="1Cb-wq-LSy"/>
                         <outlet property="posterImageView" destination="Sxg-59-1I9" id="MIN-3N-m5l"/>
                         <outlet property="rateLabel" destination="GlU-sY-ZiH" id="CkA-av-xmT"/>
