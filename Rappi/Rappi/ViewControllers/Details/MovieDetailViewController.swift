@@ -5,6 +5,7 @@ class MovieDetailViewController: UITableViewController, DetailViewController {
     
     var item: Listable?
     var provider: DetailProvider?
+    var detail: MovieDetails?
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -15,7 +16,7 @@ class MovieDetailViewController: UITableViewController, DetailViewController {
     @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var revenueLabel: UILabel!
     @IBOutlet weak var genresLabel: UILabel!
-    @IBOutlet weak var homepageLabel: UILabel!
+    @IBOutlet weak var homepageButton: UIButton!
 
     private let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
@@ -25,6 +26,17 @@ class MovieDetailViewController: UITableViewController, DetailViewController {
         
         self.configureActivityIndicatorView()
         self.loadData()
+    }
+    
+    @IBAction func homepageButtonTapped(_ sender: Any) {
+        
+        guard let homepage = self.detail?.homepage,
+            let url = URL(string: homepage) else {
+                
+            return
+        }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 
@@ -64,13 +76,15 @@ private extension MovieDetailViewController {
                 return
             }
             
+            strongSelf.detail = movieDetails
+            
             DispatchQueue.main.async {
                 
                 strongSelf.taglineLabel.text = movieDetails.tagline
                 strongSelf.budgetLabel.text = NumberFormatter.localizedString(from: NSNumber(value: movieDetails.budget), number: NumberFormatter.Style.decimal)
                 strongSelf.revenueLabel.text = NumberFormatter.localizedString(from: NSNumber(value: movieDetails.revenue), number: NumberFormatter.Style.decimal)
                 strongSelf.genresLabel.text = movieDetails.genres
-                strongSelf.homepageLabel.text = movieDetails.homepage
+                strongSelf.homepageButton.setTitle(movieDetails.homepage, for: .normal) 
                 
                 strongSelf.activityIndicatorView.stopAnimating()
             }

@@ -215,28 +215,40 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="1bz-zx-7MR" detailTextLabel="EvW-Gj-4UQ" style="IBUITableViewCellStyleValue1" id="sBr-U1-hrA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="sBr-U1-hrA">
                                         <rect key="frame" x="0.0" y="440" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sBr-U1-hrA" id="Qi2-5r-eW4">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Homepage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1bz-zx-7MR">
-                                                    <rect key="frame" x="16" y="12" width="84" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Homepage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMy-Ql-Gg0">
+                                                    <rect key="frame" x="16" y="11" width="84" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="1Ps-eL-gmF"/>
+                                                        <constraint firstAttribute="width" constant="84" id="G4p-FO-8Oa"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EvW-Gj-4UQ">
-                                                    <rect key="frame" x="354.5" y="12" width="4.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2B-wr-kDz">
+                                                    <rect key="frame" x="108" y="0.0" width="251" height="43.5"/>
+                                                    <state key="normal" title="Visit"/>
+                                                    <connections>
+                                                        <action selector="homepageButtonTapped:" destination="COW-4T-GiO" eventType="touchUpInside" id="X3N-e4-kha"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="m2B-wr-kDz" firstAttribute="leading" secondItem="UMy-Ql-Gg0" secondAttribute="trailing" constant="8" id="COY-0X-vLy"/>
+                                                <constraint firstItem="UMy-Ql-Gg0" firstAttribute="leading" secondItem="Qi2-5r-eW4" secondAttribute="leadingMargin" id="FmB-IW-UUB"/>
+                                                <constraint firstItem="UMy-Ql-Gg0" firstAttribute="top" secondItem="Qi2-5r-eW4" secondAttribute="topMargin" id="NpM-cI-C9m"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="m2B-wr-kDz" secondAttribute="trailing" id="XMb-gS-wT8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UMy-Ql-Gg0" secondAttribute="bottom" priority="999" constant="1.5" id="s3J-RF-2LH"/>
+                                                <constraint firstItem="m2B-wr-kDz" firstAttribute="top" secondItem="Qi2-5r-eW4" secondAttribute="top" id="te8-Ue-0gs"/>
+                                                <constraint firstAttribute="bottom" secondItem="m2B-wr-kDz" secondAttribute="bottom" id="tx9-1S-CGG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -251,7 +263,7 @@
                     <connections>
                         <outlet property="budgetLabel" destination="a7w-z2-XqW" id="yDf-2f-JVL"/>
                         <outlet property="genresLabel" destination="vmz-nl-hxF" id="owb-cH-iUV"/>
-                        <outlet property="homepageLabel" destination="EvW-Gj-4UQ" id="ajZ-vT-BVT"/>
+                        <outlet property="homepageButton" destination="m2B-wr-kDz" id="ZwL-Oe-Jkz"/>
                         <outlet property="overviewLabel" destination="EnJ-6R-2Xa" id="b3q-rE-O1N"/>
                         <outlet property="posterImageView" destination="5xj-XG-7sB" id="fR5-RU-tjS"/>
                         <outlet property="rateLabel" destination="gFu-aU-igZ" id="M7V-cC-M4P"/>
