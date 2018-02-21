@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311C63CF203DD24900B2ED5C /* MovieDetailProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311C63CE203DD24900B2ED5C /* MovieDetailProviderTests.swift */; };
+		311C63D1203DD33900B2ED5C /* SeriesDetailProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311C63D0203DD33900B2ED5C /* SeriesDetailProviderTests.swift */; };
 		311CC8A2203DC02B00180AC9 /* SeriesDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CC8A1203DC02B00180AC9 /* SeriesDetailProvider.swift */; };
 		311CC8A4203DC08800180AC9 /* SeriesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CC8A3203DC08800180AC9 /* SeriesDetails.swift */; };
 		311CC8A6203DC0E400180AC9 /* SeriesDetailPushingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CC8A5203DC0E400180AC9 /* SeriesDetailPushingStrategy.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		311C63CE203DD24900B2ED5C /* MovieDetailProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProviderTests.swift; sourceTree = "<group>"; };
+		311C63D0203DD33900B2ED5C /* SeriesDetailProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailProviderTests.swift; sourceTree = "<group>"; };
 		311CC8A1203DC02B00180AC9 /* SeriesDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailProvider.swift; sourceTree = "<group>"; };
 		311CC8A3203DC08800180AC9 /* SeriesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetails.swift; sourceTree = "<group>"; };
 		311CC8A5203DC0E400180AC9 /* SeriesDetailPushingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailPushingStrategy.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				3186EA33203C3A86006FA984 /* Info.plist */,
 				3186EA31203C3A86006FA984 /* MoviesListsProviderTests.swift */,
 				31473C0E203DCCED0016AB5D /* SeriesListsProviderTests.swift */,
+				311C63CE203DD24900B2ED5C /* MovieDetailProviderTests.swift */,
+				311C63D0203DD33900B2ED5C /* SeriesDetailProviderTests.swift */,
 			);
 			path = RappiTests;
 			sourceTree = "<group>";
@@ -392,6 +398,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3186EA32203C3A86006FA984 /* MoviesListsProviderTests.swift in Sources */,
+				311C63CF203DD24900B2ED5C /* MovieDetailProviderTests.swift in Sources */,
+				311C63D1203DD33900B2ED5C /* SeriesDetailProviderTests.swift in Sources */,
 				31473C0F203DCCED0016AB5D /* SeriesListsProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

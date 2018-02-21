@@ -1,7 +1,6 @@
 import XCTest
 @testable import Rappi
 
-
 class MoviesListsProviderTests: XCTestCase {
 
     let provider = MoviesListsProvider(with: Client())
