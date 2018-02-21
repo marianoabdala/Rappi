@@ -66,8 +66,6 @@ private extension MovieDetailViewController {
             
             DispatchQueue.main.async {
                 
-
-                
                 strongSelf.taglineLabel.text = movieDetails.tagline
                 strongSelf.budgetLabel.text = NumberFormatter.localizedString(from: NSNumber(value: movieDetails.budget), number: NumberFormatter.Style.decimal)
                 strongSelf.revenueLabel.text = NumberFormatter.localizedString(from: NSNumber(value: movieDetails.revenue), number: NumberFormatter.Style.decimal)
