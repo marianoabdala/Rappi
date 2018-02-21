@@ -66,9 +66,11 @@ private extension MovieDetailViewController {
             
             DispatchQueue.main.async {
                 
+
+                
                 strongSelf.taglineLabel.text = movieDetails.tagline
-                strongSelf.budgetLabel.text = String(movieDetails.budget)
-                strongSelf.revenueLabel.text = String(movieDetails.revenue)
+                strongSelf.budgetLabel.text = NumberFormatter.localizedString(from: NSNumber(value: movieDetails.budget), number: NumberFormatter.Style.decimal)
+                strongSelf.revenueLabel.text = NumberFormatter.localizedString(from: NSNumber(value: movieDetails.revenue), number: NumberFormatter.Style.decimal)
                 strongSelf.genresLabel.text = movieDetails.genres
                 strongSelf.homepageLabel.text = movieDetails.homepage
                 
