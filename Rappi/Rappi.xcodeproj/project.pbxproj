@@ -12,11 +12,12 @@
 		311CC8A6203DC0E400180AC9 /* SeriesDetailPushingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CC8A5203DC0E400180AC9 /* SeriesDetailPushingStrategy.swift */; };
 		311CC8A8203DC10D00180AC9 /* SeriesDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311CC8A7203DC10D00180AC9 /* SeriesDetail.storyboard */; };
 		311CC8AA203DC19E00180AC9 /* SeriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CC8A9203DC19E00180AC9 /* SeriesDetailViewController.swift */; };
+		31473C0F203DCCED0016AB5D /* SeriesListsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31473C0E203DCCED0016AB5D /* SeriesListsProviderTests.swift */; };
 		3186EA1D203C3A86006FA984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186EA1C203C3A86006FA984 /* AppDelegate.swift */; };
 		3186EA22203C3A86006FA984 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3186EA20203C3A86006FA984 /* Main.storyboard */; };
 		3186EA24203C3A86006FA984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3186EA23203C3A86006FA984 /* Assets.xcassets */; };
 		3186EA27203C3A86006FA984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3186EA25203C3A86006FA984 /* LaunchScreen.storyboard */; };
-		3186EA32203C3A86006FA984 /* RappiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186EA31203C3A86006FA984 /* RappiTests.swift */; };
+		3186EA32203C3A86006FA984 /* MoviesListsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186EA31203C3A86006FA984 /* MoviesListsProviderTests.swift */; };
 		3186EA3E203C3CA9006FA984 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3186EA3D203C3CA9006FA984 /* List.storyboard */; };
 		3186EA40203C3CC3006FA984 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186EA3F203C3CC3006FA984 /* ListViewController.swift */; };
 		3186EA42203C44EC006FA984 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186EA41203C44EC006FA984 /* MainTabBarViewController.swift */; };
@@ -56,6 +57,7 @@
 		311CC8A5203DC0E400180AC9 /* SeriesDetailPushingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailPushingStrategy.swift; sourceTree = "<group>"; };
 		311CC8A7203DC10D00180AC9 /* SeriesDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesDetail.storyboard; sourceTree = "<group>"; };
 		311CC8A9203DC19E00180AC9 /* SeriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailViewController.swift; sourceTree = "<group>"; };
+		31473C0E203DCCED0016AB5D /* SeriesListsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListsProviderTests.swift; sourceTree = "<group>"; };
 		3186EA19203C3A86006FA984 /* Rappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3186EA1C203C3A86006FA984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3186EA21203C3A86006FA984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 		3186EA26203C3A86006FA984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3186EA28203C3A86006FA984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3186EA2D203C3A86006FA984 /* RappiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RappiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3186EA31203C3A86006FA984 /* RappiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappiTests.swift; sourceTree = "<group>"; };
+		3186EA31203C3A86006FA984 /* MoviesListsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListsProviderTests.swift; sourceTree = "<group>"; };
 		3186EA33203C3A86006FA984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3186EA3D203C3CA9006FA984 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		3186EA3F203C3CC3006FA984 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -143,8 +145,9 @@
 		3186EA30203C3A86006FA984 /* RappiTests */ = {
 			isa = PBXGroup;
 			children = (
-				3186EA31203C3A86006FA984 /* RappiTests.swift */,
 				3186EA33203C3A86006FA984 /* Info.plist */,
+				3186EA31203C3A86006FA984 /* MoviesListsProviderTests.swift */,
+				31473C0E203DCCED0016AB5D /* SeriesListsProviderTests.swift */,
 			);
 			path = RappiTests;
 			sourceTree = "<group>";
@@ -388,7 +391,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3186EA32203C3A86006FA984 /* RappiTests.swift in Sources */,
+				3186EA32203C3A86006FA984 /* MoviesListsProviderTests.swift in Sources */,
+				31473C0F203DCCED0016AB5D /* SeriesListsProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

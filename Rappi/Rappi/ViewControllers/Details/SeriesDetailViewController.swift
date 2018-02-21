@@ -45,7 +45,7 @@ private extension SeriesDetailViewController {
         self.posterImageView.image = item.poster
         self.titleLabel.text = item.title
         self.releaseDateLabel.text = item.releaseDate
-        self.rateLabel.text = String(item.rate)
+        self.rateLabel.text = String(item.rate ?? 0)
         self.overviewLabel.text = item.overview
         
         self.loadDetails(for: item)

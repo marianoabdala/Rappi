@@ -24,7 +24,7 @@ class ListableTableViewCell: UITableViewCell {
      
         self.titleLabel.text = listable.title
         self.releaseDateLabel.text = listable.releaseDate
-        self.rateLabel.text = String(listable.rate)
+        self.rateLabel.text = String(listable.rate ?? 0)
         self.overviewLabel.text = listable.overview
         
         listable.fetchPoster { [weak self] in
