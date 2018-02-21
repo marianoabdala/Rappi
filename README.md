@@ -10,3 +10,7 @@ Screens: ListViewModel, MovieDetailViewController, SeriesDetailViewController.
 UI (Cells): ListableTableViewCell.  
 
 # Single responsibility principle
+It's the principle by which each type should have a single responsibility or purpose. This serves as means to keep classes small, reusable and testable.
+
+# Good code
+Good code should be easy to read, to understand, to reuse and to refactor. Good code should go straight to the point, lack any unnecessary artifact.
